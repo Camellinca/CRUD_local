@@ -1,7 +1,31 @@
 .container {
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    padding: 10px 30px 0px 5px;
+    padding: 10px 0px 0px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    display: block;
+    background-color: darkblue;
+    color: white;
+    border-radius: 10px;
+    width: 180px;
+    padding: 10px;
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+}
+.button:hover {
+    background-color: rgb(85, 215, 255);
+    color: black;
+}
+@media (max-width: 480px) {
+    .button {
+        padding: 5px;
+        width: 100%;
+        font-size: 14px;
+    }
 }

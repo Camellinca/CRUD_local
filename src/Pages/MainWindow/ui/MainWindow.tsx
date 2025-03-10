@@ -7,9 +7,9 @@ interface Props {
 export const MainWindow = ({ children }: Props) => {
     return (
         <>
-            <header className={styles.header}>Хедер</header>
+            {/* <header></header> */}
             <main className={styles.main}>{children}</main>
-            <footer className={styles.footer}>Футер</footer>
+            {/* <footer></footer> */}
         </>
     );
 };

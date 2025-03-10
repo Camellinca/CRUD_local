@@ -1,6 +1,10 @@
-export const EditIcon = () => {
+interface Props {
+    className?: string;
+}
+
+export const EditIcon = ({ className }: Props) => {
     return (
-        <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <svg className={className ?? ''} viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path
                 fill="#000000"
                 fillRule="evenodd"

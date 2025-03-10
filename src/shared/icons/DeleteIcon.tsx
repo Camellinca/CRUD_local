@@ -1,27 +1,13 @@
-export const DeleteIcon = () => {
+interface Props {
+    className?: string;
+}
+
+export const DeleteIcon = ({ className }: Props) => {
     return (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H10M15 5H17C18.1046 5 19 5.89543 19 7V12"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
-            <path
-                d="M14 16L16.5 18.5M19 21L16.5 18.5M16.5 18.5L19 16M16.5 18.5L14 21"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+        <svg className={className ?? ''} fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g id="No_Waiting_Sign" data-name="No Watting Sign">
+                <path d="M12,2.07a9.93,9.93,0,1,0,7.03,16.95.374.374,0,0,0,.06-.07A9.837,9.837,0,0,0,21.935,12,9.944,9.944,0,0,0,12,2.07Zm0,18.86A8.945,8.945,0,0,1,3.065,12a8.84,8.84,0,0,1,2.28-5.95l12.61,12.61A8.925,8.925,0,0,1,12,20.93Zm6.67-2.98L6.045,5.34a8.934,8.934,0,0,1,12.62,12.61Z" />
+            </g>
         </svg>
     );
 };

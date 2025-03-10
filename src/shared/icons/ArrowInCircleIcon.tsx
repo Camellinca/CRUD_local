@@ -1,13 +1,12 @@
-export const ArrowInCircleIcon = () => {
+interface Props {
+    className?: string;
+}
+
+export const ArrowInCircleIcon = ({ className }: Props) => {
     return (
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M13 15L16 12M16 12L13 9M16 12H8M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                stroke="#000000"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-            />
+        <svg className={className ?? ''} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 10L6 10L6 4L10 4L10 10L13 10V11L8 16L3 11L3 10Z" fill="#000000" />
+            <path d="M2 0L14 1.90735e-06V2L2 2V0Z" fill="#000000" />
         </svg>
     );
 };
