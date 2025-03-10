@@ -51,6 +51,15 @@
     transform: rotate(-90deg);
     transition: transform 0.4s ease-out;
 }
+.arrow_interactable {
+    path {
+        fill: rgb(76, 76, 255);
+    }
+}
+.arrow_interactable:hover path {
+    fill: darkblue;
+}
+
 .arrow_open {
     transform: rotate(0deg);
 }
@@ -58,14 +67,15 @@
 .svg_container {
     width: 36px;
     height: 36px;
+    cursor: pointer;
 }
 .bluesvg {
     path {
-        fill: darkblue;
+        fill: rgb(76, 76, 255);
     }
 }
-.svg:hover path {
-    fill: rgb(54, 54, 238);
+.bluesvg:hover path {
+    fill: darkblue;
 }
 
 @media (max-width: 480px) {

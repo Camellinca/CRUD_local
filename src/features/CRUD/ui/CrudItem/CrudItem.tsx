@@ -17,11 +17,13 @@ export const CrudItem = ({ label, description, index }: Props) => {
     const { deleteByIndex } = useCrudStore();
     //Если описание больше одной строки, элемент на клик увеличивается в размерах
     const [isOpen, setOpen] = useState<boolean>(false);
-    const fullHeight = useRef<number>(0);
+    const [fullHeight, setFullHeight] = useState<number>(21);
+
+    //const fullHeight = useRef<number>(0);
     const textbox = useRef<HTMLParagraphElement>(null);
 
     const isInteractable = () => {
-        return fullHeight.current > 21;
+        return fullHeight > 21;
     };
 
     const onClick = () => {
@@ -38,12 +40,12 @@ export const CrudItem = ({ label, description, index }: Props) => {
     const onResize = () => {
         setOpen(false);
         setTimeout(() => {
-            if (textbox.current) fullHeight.current = textbox.current.scrollHeight;
+            if (textbox.current) setFullHeight(textbox.current.scrollHeight);
         }, 500);
     };
 
     useLayoutEffect(() => {
-        if (textbox.current) fullHeight.current = textbox.current.scrollHeight;
+        if (textbox.current) setFullHeight(textbox.current.scrollHeight);
         addEventListener('resize', onResize);
         return () => {
             removeEventListener('resize', onResize);
@@ -55,7 +57,7 @@ export const CrudItem = ({ label, description, index }: Props) => {
             <div className={styles.item_up}>
                 <div className={styles.item_up_part}>
                     <div className={`${styles.arrow} , ${isOpen ? styles.arrow_open : ''}`}>
-                        <ArrowInCircleIcon className={isInteractable() ? styles.bluesvg : ''} />
+                        <ArrowInCircleIcon className={isInteractable() ? styles.arrow_interactable : ''} />
                     </div>
                     <h2 className={styles.header}>{label}</h2>
                 </div>
@@ -73,7 +75,7 @@ export const CrudItem = ({ label, description, index }: Props) => {
                     </label>
                 </div>
             </div>
-            <p ref={textbox} style={isOpen ? { paddingBottom: fullHeight.current } : { paddingBottom: '0px' }} className={styles.text}>
+            <p ref={textbox} style={isOpen ? { paddingBottom: fullHeight } : { paddingBottom: '0px' }} className={styles.text}>
                 {description != '' ? description : 'Без описания'}
             </p>
         </div>
