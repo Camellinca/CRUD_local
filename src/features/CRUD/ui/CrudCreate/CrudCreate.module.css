@@ -10,3 +10,19 @@
     margin: 0;
     padding: 10px;
 }
+
+@media (max-width: 480px) {
+    .main {
+        height: 100vh;
+        box-shadow: none;
+        margin: 0;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main h1 {
+        padding: 30px;
+        font-size: 18px;
+    }
+}
