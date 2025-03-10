@@ -1,0 +1,19 @@
+.header {
+    color: blueviolet;
+}
+.main {
+    max-width: 1200px;
+    width: 90vw;
+    background-color: rgb(176, 255, 235);
+}
+.footer {
+    color: chocolate;
+}
+
+@media (max-width: 480px) {
+    .main {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

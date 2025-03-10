@@ -1,0 +1,9 @@
+.main {
+    background-color: rgb(51, 170, 250);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.main * {
+    box-sizing: border-box;
+}
