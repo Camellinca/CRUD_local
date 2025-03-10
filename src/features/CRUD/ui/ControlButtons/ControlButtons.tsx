@@ -1,6 +1,6 @@
-import styles from './CrudControl.module.css';
+import styles from './ControlButtons.module.css';
 
-export const CrudControl = () => {
+export const ControlButtons = () => {
     return (
         <div className={styles.container}>
             <button>Заполнить шаблоном</button>

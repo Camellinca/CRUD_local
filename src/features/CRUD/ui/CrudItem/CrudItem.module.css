@@ -39,7 +39,7 @@
     font-size: 14px;
     height: 21px;
     overflow: hidden;
-    transition: padding 1s ease-out;
+    transition: padding 0.7s ease-out;
 }
 
 .arrow {

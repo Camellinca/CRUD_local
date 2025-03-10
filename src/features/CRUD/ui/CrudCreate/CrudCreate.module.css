@@ -1,0 +1,52 @@
+.main {
+    width: 100%;
+    height: 80vh;
+    border-radius: 50px;
+    background-color: rgb(248, 252, 248);
+    margin: 10px auto 10px auto;
+    box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.container div {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.container input,
+textarea {
+    padding: 7px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    width: 60%;
+    min-width: 300px;
+    border-radius: 5px;
+    background-color: azure;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .input_requied {
+    background-color: #ffe2e2;
+}
+
+.container .input_validated {
+    background-color: #e6ffe2;
+}
+
+.container textarea {
+    min-height: 84px;
+    background-color: #ffffff;
+}

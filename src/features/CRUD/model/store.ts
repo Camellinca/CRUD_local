@@ -1,15 +1,17 @@
 import { create } from 'zustand';
 import { CrudList, CrudListItem } from '../lib/types/CRUD';
 
-interface BearState {
+interface CrudState {
     news: CrudList;
+    currentIndex: number;
     setNews: (data: CrudList) => void;
     editByIndex: (data: CrudListItem, index: number) => void;
     deleteByIndex: (index: number) => void;
 }
 
-export const useStore = create<BearState>()(set => ({
+export const useStore = create<CrudState>()(set => ({
     news: [],
+    currentIndex: 0,
     setNews: data => set(() => ({ news: data })),
     editByIndex: (data, index) =>
         set(state => {
